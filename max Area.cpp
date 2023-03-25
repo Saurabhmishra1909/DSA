@@ -1,62 +1,48 @@
 #include<iostream>
-#include<bits/stdc++.h>
 using namespace std;
-//void pGE(int arr[],int size,int n){
-//     int count=1,k=1;
-//     if(size==1){
-//         cout<<"1"<<endl;
-//         return;
-//     }
-//     int max=arr[size-1];
-//     for(int j=size-2;j>=0;j--){
-//         if(arr[j]>max){
-//             count++;
-//         }
-//         else{
-//              break;
-//          }
-//     }
-//     for(int j=size;j<n;j++){
-//         if(arr[j]>max){
-//             k++;
-//         }
-//         else{
-//              break;
-//          }
-//     }
-//     cout<<count<<" "<<k;
-//     int b=k+count;
-//     //cout<<b*max<<endl;
-//     pGE(arr,size-1,n);
-// }
+
 int main()
 {
     int n;
     cin>>n;
-    int arr[n];
+    int a[n];
+    int max=-9999;
+    int min=9999;
     for(int i=0;i<n;i++){
-        cin>>arr[i];
+        cin>>a[i];
     }
-    int count=1;
     for(int i=0;i<n;i++){
+        int c=1;
         for(int j=i-1;j>=0;j--){
-            if(arr[j]>arr[i]){
-                count++;
+            if(a[j]>a[i]){
+                c++;
+            }
+            else{
+                break;
+            }
+            // cout<<c<<endl;
+        }
+        for(int j=i+1;j<n;j++){
+            if(a[j]>a[i]){
+                c++;
             }
             else{
                 break;
             }
         }
-        // for(int r=i+1;r<n;r++){
-        //     if(arr[r]>arr[i]){
-        //         count++;
-        //     }
-        //     else{
-        //         break;
-        //     }
-        // }
-        cout<<count<<endl;
-    }
-    //pGE(arr,n,n);
+        int area=c*a[i];
+        cout<<a[i]<<" ka l*b -->("<<a[i]<<"*"<<c<<") = "<<area<<endl;
+        cout<<endl;
+        if(area<min){
+            min=area;
+        }
+        if(area>max){
+            max=area;
+        }
+    }cout<<endl;
+    cout<<"Upar sabhi me se: "<<endl;
+    cout<<min<<" minimum area hoga"<<endl;
+    cout<<max<<" maximum area hoga"<<endl;
+
     return 0;
 }
