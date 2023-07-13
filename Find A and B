@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int a,b,c;
+	    cin>>a>>b>>c;
+	    int xy=a*b;
+	    int z=c;
+	    
+	    int yz=c*b;
+	    int x=a;
+	    
+	    int xz=a*c;
+	    int y=b;
+	     if( xy % z == 0)
+	     {
+         cout << xy << " " << z<< endl;
+        }
+        else if(yz % x ==0) 
+        {
+         cout << yz << " " << x<< endl;
+         
+        }
+        else if (xz % y ==0)
+        {
+         cout << xz << " " <<y << endl;
+        }
+        else
+        {
+         cout << -1 << endl;
+        }
+	}
+	return 0;
+}
