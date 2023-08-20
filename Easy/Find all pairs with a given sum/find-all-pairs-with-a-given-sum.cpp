@@ -14,7 +14,7 @@ class Solution{
           s.insert(A[i]);  
         }
         for(int i=0;i<m;i++){
-            if(s.find(x-B[i])!=s.end()) ans.push_back(make_pair(x-B[i],B[i]));
+            if(s.find(x-B[i])!=s.end()) ans.push_back({x-B[i],B[i]});
         }
         sort(ans.begin(),ans.end());
         return ans;
