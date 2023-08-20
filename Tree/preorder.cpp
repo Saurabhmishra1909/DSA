@@ -57,7 +57,7 @@ void postorder(node* root){
 
     postorder(root->left);//L
     postorder(root->right);//R
-    cout<<root->data<<" ";//N
+    cout<<root->data<<"  ";//N
 }
 
 int main()
