@@ -1,0 +1,1 @@
+{"name":"Local: setStl","url":"c:\\Users\\saura\\Desktop\\C++\\setStl.cpp","tests":[{"id":1682173432784,"input":"8\nsaurabh\nsid\nsaurabh\nshivam\nsobhit\nsid\nshivam\nsid","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\saura\\Desktop\\C++\\setStl.cpp","group":"local","local":true}

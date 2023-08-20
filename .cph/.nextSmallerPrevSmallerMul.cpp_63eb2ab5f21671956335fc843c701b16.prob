@@ -1,0 +1,1 @@
+{"name":"Local: nextSmallerPrevSmallerMul","url":"c:\\Users\\saura\\Desktop\\C++\\nextSmallerPrevSmallerMul.cpp","tests":[{"id":1679991603986,"input":"7\n30\n2\n4\n1\n8\n7\n5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\saura\\Desktop\\C++\\nextSmallerPrevSmallerMul.cpp","group":"local","local":true}
