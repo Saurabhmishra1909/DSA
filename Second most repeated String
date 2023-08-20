@@ -1,0 +1,27 @@
+ string secFrequent (string arr[], int n)
+    {
+        //code here.
+        vector<string>v;
+        unordered_map<string,int>m;
+        for(int i=0;i<n;i++){
+            m[arr[i]]++;
+        }
+        int mi=INT_MIN;
+        string s;
+        for(auto it:m){
+            if(it.second>mi) {
+                mi=it.second;
+                 s=it.first;
+            }
+        }
+        m[s]=0;
+        if(m.size()==1) return "";
+        mi=0;
+        for(auto it:m){
+            if(it.second>mi) {
+                mi=it.second;
+                 s=it.first;
+            }
+        }
+        return s;
+    }
