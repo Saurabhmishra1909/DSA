@@ -14,7 +14,7 @@ class Solution
         // code here 
        int j=m-1;
        int i=0;
-       while(j<m&&i<n){
+       while(j>=0&&i<n){
            if(mat[i][j]==x) return 1;
            else if(mat[i][j]>x) j--;
            else i++;
