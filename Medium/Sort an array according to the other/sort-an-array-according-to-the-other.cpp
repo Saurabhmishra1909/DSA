@@ -27,10 +27,10 @@ class Solution{
         }
         for(int i=0;i<mi;i++){
             int count=m[A2[i]];
-            if(count<=0) continue;
+            //if(count<=0) continue;
             while(count){
                     ans.push_back(A2[i]);
-                    m[A2[i]]--;
+                    // m[A2[i]]--;
                     count--;
             }
         }
