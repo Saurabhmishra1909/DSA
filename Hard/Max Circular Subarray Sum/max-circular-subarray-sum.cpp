@@ -9,14 +9,12 @@ class Solution{
     // arr: input array
     // num: size of array
     //Function to find maximum circular subarray sum.
+    
+    
     int circularSubarraySum(int arr[], int n){
         
         // your code here
-        int mass=INT_MIN;
-        int miss=INT_MAX;
-        int aS=0;
-        int tmas=0;
-        int tmis=0;
+        int mass=INT_MIN, miss=INT_MAX, aS=0, tmas=0, tmis=0;
         for(int i=0;i<n;i++){
             aS+=arr[i];
             //max subarraysum
@@ -28,7 +26,9 @@ class Solution{
         }
         if(aS==miss) return mass;
         return max(mass,(aS-miss));
+
     }
+        
 };
 
 //{ Driver Code Starts.
