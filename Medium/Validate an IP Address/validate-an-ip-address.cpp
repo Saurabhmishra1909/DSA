@@ -15,22 +15,20 @@ class Solution {
             vector<string>v;
             string ans="";
             int num=0;
-            for(int i=0;i<s.size();i++){
-                if(s[i]=='.') {
+            for(auto i:s){
+                if(i=='.') {
                     if(ans.size()==0) return false;
                     v.push_back(ans);
                     ans="";
                     num++;
                 }
-                else {
-                    ans.push_back(s[i]);
-                }
+                else ans.push_back(i);
             }
             
             if(num!=4) return false;
             for(auto i:v){
-                for (char character : i) {
-                    if (isalpha(character)) return false;
+                for (char c: i) {
+                    if (isalpha(c)) return false;
                 }
                 int a=stoi(i);
                 if(i.size()>1&&a<=9) return false;
