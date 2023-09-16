@@ -15,13 +15,10 @@ class Solution
     vector<long long> printFibb(int n) 
     {
         //code here
-        vector<long long>ans;
-        if(n==0||n==1) return{n};
-        ans.push_back(1);
-        ans.push_back(1);
+        vector<long long >ans(n);
+        ans[0]=1,ans[1]=1;
         for(int i=2;i<n;i++){
-            ans[i]=ans[i-2]+ans[i-1];
-            ans.push_back(ans[i]);
+            ans[i]=ans[i-1]+ans[i-2];
         }
         return ans;
     }
