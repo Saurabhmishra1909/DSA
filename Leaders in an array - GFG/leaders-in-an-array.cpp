@@ -2,7 +2,7 @@
 // C++ program to remove recurring digits from
 // a given number
 #include <bits/stdc++.h>
-using namespace std;
+using namespace std ;
 
 
 // } Driver Code Ends
