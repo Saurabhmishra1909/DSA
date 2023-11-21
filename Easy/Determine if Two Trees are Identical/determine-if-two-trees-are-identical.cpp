@@ -39,22 +39,25 @@ class Solution
 {
     public:
     //Function to check if two trees are identical.
-    bool isIdentical(Node *p, Node *q)
+    bool isIdentical(Node *r1, Node *r2)
     {
         //Your Code here
-    if(p==NULL&&q==NULL) return true;
-     if(p==NULL&&q!=NULL) return false;
-      if(q==NULL&&p!=NULL) return false;
-     
-    //  return p==q;
-     bool left=isIdentical(p->left,q->left);
-     bool right=isIdentical(p->right,q->right);
-     bool value=p->data==q->data;
-     if(value&&left&&right) return true;
-     return false;
+         string s1,s2;
+        inorder(r1,s1);
+        inorder(r2,s2);
+        return s1==s2;
+    }
+    
+    void inorder(Node* root,string &s){
+        if(root == NULL){
+            s.push_back('N');
+            return;
+        }
+        s.push_back(root->data + '0');
+        inorder(root->left,s);
+        inorder(root->right,s);
     }
 };
-
 
 //{ Driver Code Starts.
 
