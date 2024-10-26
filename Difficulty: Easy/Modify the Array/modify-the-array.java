@@ -42,23 +42,26 @@ System.out.println("~");
 class Solution {
     static ArrayList<Integer> modifyAndRearrangeArr(int arr[]) {
         // Complete the function
-        ArrayList<Integer> lt = new ArrayList<>();
-        int n = arr.length;
+        ArrayList<Integer>lst=new ArrayList<Integer>();
+        int n=arr.length;
+        int count=0;
         for(int i=0;i<n-1;i++){
-            if(arr[i] != 0 && arr[i] == arr[i+1]){
-                arr[i] = 2*arr[i];
-                arr[i+1] = 0;
-                i++;
+            if(arr[i]==arr[i+1]&&arr[i]!=0){
+                arr[i]=arr[i]+arr[i];
+                lst.add(arr[i]);
+                arr[i+1]=0;
             }
+            else if(arr[i]!=0){
+               lst.add(arr[i]); 
+            }
+            else count++;
         }
-        int cnt = 0;
-        for(int ele:arr){
-            if(ele == 0) cnt++;
-            else lt.add(ele);
+        lst.add(arr[n-1]);
+        while(count>0){
+            lst.add(0);
+            count--;
         }
-        while(cnt-- > 0){
-            lt.add(0);
-        }
-        return lt;
+        return lst;
     }
+    
 }
